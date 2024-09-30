@@ -19,13 +19,13 @@ def ponto_fixo(c0, tol, n):
     ct = 0
     while err > tol and ct < n:
         cip1 = G(ci)
-        err = abs(((cip1 - ci) / cip1) * 100)
+        err = abs(((cip1 - ci) / cip1))
         print(f"ci = {ci}, ci+1 = {cip1}, f(ci) = {F(ci)}, err = {err}")
         ci = cip1
         ct += 1
         
 
-ponto_fixo(1, 0.0000001, 100)
+ponto_fixo(1, 10**-4, 100)
 
 c = np.arange(4, 6, 1)
 y = np.arange(-100000, 100000, 1)
